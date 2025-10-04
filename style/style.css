@@ -1,0 +1,232 @@
+/* Fonts */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f9fafb;
+    /* Tailwind bg-background-light */
+    color: #111827;
+    /* Tailwind text-text-light */
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    min-height: 100vh;
+}
+
+.content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Header */
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+@media(min-width: 768px) {
+    .header {
+        flex-direction: row;
+    }
+}
+
+.header-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+@media(min-width: 768px) {
+    .header-title {
+        text-align: left;
+        margin-bottom: 0;
+    }
+}
+
+.header-title h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+@media(min-width: 768px) {
+    .header-title h1 {
+        font-size: 2.25rem;
+    }
+}
+
+.header-title p {
+    color: #6b7280;
+    /* Tailwind text-text-secondary-light */
+    margin-top: 0.25rem;
+}
+
+/* Search */
+.header-search {
+    width: 100%;
+    max-width: 200px;
+    position: relative;
+    margin-right: 3rem;
+}
+
+.search-wrapper {
+    position: relative;
+}
+
+.search-wrapper span {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding: 0.5rem 0.75rem 0.5rem 2.5rem;
+    border-radius: 9999px;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    /* Tailwind bg-card-light */
+    color: #111827;
+    outline: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.search-wrapper input:focus {
+    border-color: #3b82f6;
+    /* Tailwind primary */
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* Grid */
+.main .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media(min-width: 640px) {
+    .main .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 1024px) {
+    .main .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.grid a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    /* Tailwind bg-card-light */
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: #3b82f6;
+    /* Tailwind primary */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.grid a:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transform: translateY(-0.25rem);
+}
+
+/* Footer / Pagination */
+.footer {
+    margin-top: auto;
+    padding-top: 2rem;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pagination button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    padding: 0.5rem;
+    background-color: #ffffff;
+    color: #6b7280;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #f3f4f6;
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.pagination button.active {
+    background-color: #3b82f6;
+    color: white;
+    font-weight: 600;
+}
+
+.pagination span {
+    color: #6b7280;
+    padding: 0 0.5rem;
+}
+
+
+.exercise-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #ffffff; /* card background */
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  text-decoration: none;
+  transition: all 0.3s;
+  color: #3b82f6; /* title color */
+}
+
+.exercise-card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.exercise-title {
+  font-size: 1.125rem; /* ~ text-lg */
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.exercise-subtitle {
+  font-size: 0.875rem; /* smaller text */
+  font-weight: 400;
+  color: #6b7280; /* gray subtitle */
+}

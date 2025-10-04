@@ -1,178 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <style>
-      .material-icons {
-        vertical-align: middle;
-      }
-    </style>
+    <link rel="stylesheet" href="style/style.css" />
   </head>
-  <body class="bg-background-light dark:bg-background-dark font-display">
-    <div class="flex flex-col items-center p-4 sm:p-6 lg:p-8 min-h-screen">
-      <div class="w-full max-w-6xl flex flex-col flex-grow">
-        <header
-          class="flex flex-col md:flex-row justify-between items-center mb-10"
-        >
-          <div class="text-center md:text-left mb-6 md:mb-0">
-            <h1
-              class="text-3xl md:text-4xl font-bold text-text-light dark:text-text-dark"
-            >
-              JavaScript Ejercicios
-            </h1>
-            <p
-              class="text-text-secondary-light dark:text-text-secondary-dark mt-1"
-            >
-              Explore and practice your coding skills.
-            </p>
+  <body>
+    <div class="container">
+      <div class="content">
+        <header class="header">
+          <div class="header-title">
+            <h1>JavaScript Ejercicios</h1>
+            <p>Explora y practica tus habilidades de codificación.</p>
           </div>
-          <div class="w-full md:w-auto">
-            <div class="relative w-full max-w-md mx-auto">
-              <span
-                class="material-icons absolute left-4 top-1/2 -translate-y-1/2 text-text-secondary-light dark:text-text-secondary-dark"
-              >
-                search
-              </span>
-              <input
-                class="w-full pl-12 pr-4 py-3 bg-card-light dark:bg-card-dark text-text-light dark:text-text-dark border border-gray-200 dark:border-gray-700 rounded-full focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 shadow-sm"
-                placeholder="Search for an exercise..."
-                type="text"
-              />
+          <div class="header-search">
+            <div class="search-wrapper">
+              <span class="material-icons">search</span>
+              <input type="text" placeholder="Buscar por ejercicio..." />
             </div>
           </div>
         </header>
-        <main class="w-full flex-grow">
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <a
-              class="group bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center justify-center text-center"
-              href="pages/tarea1.html"
-            >
-              <span class="text-lg font-semibold text-primary">Tarea 1</span>
+        <main class="main">
+          <div class="grid">
+            <a href="pages/tarea1.html" class="exercise-card">
+              <span class="exercise-title">Tarea 1</span>
+              <span class="exercise-subtitle">Adivina</span>
             </a>
-            <a
-              class="group bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center justify-center text-center"
-              href="pages/tarea2.html"
-            >
-              <span class="text-lg font-semibold text-primary">Tarea 2</span>
+            <a href="pages/tarea2.html" class="exercise-card">
+              <span class="exercise-title">Tarea 2</span>
+              <span class="exercise-subtitle"> Nota media</span>
             </a>
-            <a
-              class="group bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center justify-center text-center"
-              href="pages/tarea3.html"
-            >
-              <span class="text-lg font-semibold text-primary">Tarea 3</span>
+            <a href="pages/tarea3.html" class="exercise-card">
+              <span class="exercise-title">Tarea 3</span>
+              <span class="exercise-subtitle">Reverse a String</span>
             </a>
-            <a
-              class="group bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center justify-center text-center"
-              href="pages/tarea4.html"
-            >
-              <span class="text-lg font-semibold text-primary">Tarea 4</span>
+            <a href="pages/tarea4.html" class="exercise-card">
+              <span class="exercise-title">Tarea 4</span>
+              <span class="exercise-subtitle">Reverse a String</span>
             </a>
-            <a
-              class="group bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center justify-center text-center"
-              href="pages/tarea5.html"
-            >
-              <span class="text-lg font-semibold text-primary">Tarea 5</span>
+            <a href="pages/tarea5.html" class="exercise-card">
+              <span class="exercise-title">Tarea 5</span>
+              <span class="exercise-subtitle">Reverse a String</span>
             </a>
-            <a
-              class="group bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center justify-center text-center"
-              href="pages/tarea6.html"
-            >
-              <span class="text-lg font-semibold text-primary">Tarea 6</span>
+            <a href="pages/tarea6.html" class="exercise-card">
+              <span class="exercise-title">Tarea 6</span>
+              <span class="exercise-subtitle">Reverse a String</span>
             </a>
-            <a
-              class="group bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center justify-center text-center"
-              href="pages/tarea7.html"
-            >
-              <span class="text-lg font-semibold text-primary">Tarea 7</span>
+            <a href="pages/tarea7.html" class="exercise-card">
+              <span class="exercise-title">Tarea 7</span>
+              <span class="exercise-subtitle">Reverse a String</span>
             </a>
-            <a
-              class="group bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center justify-center text-center"
-              href="pages/tarea8.html"
-            >
-              <span class="text-lg font-semibold text-primary">Tarea 8</span>
+            <a href="pages/tarea8.html" class="exercise-card">
+              <span class="exercise-title">Tarea 8</span>
+              <span class="exercise-subtitle">Reverse a String</span>
             </a>
-            <a
-              class="group bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center justify-center text-center"
-              href="pages/tarea9.html"
-            >
-              <span class="text-lg font-semibold text-primary">Tarea 9</span>
+            <a href="pages/tarea9.html" class="exercise-card">
+              <span class="exercise-title">Tarea 9</span>
+              <span class="exercise-subtitle">Reverse a String</span>
             </a>
-            <a
-              class="group bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center justify-center text-center"
-              href="pages/tarea10.html"
-            >
-              <span class="text-lg font-semibold text-primary">Tarea 10</span>
+            <a href="pages/tarea10.html" class="exercise-card">
+              <span class="exercise-title">Tarea 10</span>
+              <span class="exercise-subtitle">Reverse a String</span>
             </a>
-            <a
-              class="group bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center justify-center text-center"
-              href="pages/tarea11.html"
-            >
-              <span class="text-lg font-semibold text-primary">Tarea 11</span>
+            <a href="pages/tarea11.html" class="exercise-card">
+              <span class="exercise-title">Tarea 11</span>
+              <span class="exercise-subtitle">Reverse a String</span>
             </a>
-            <a
-              class="group bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center justify-center text-center"
-              href="pages/tarea12.html"
-            >
-              <span class="text-lg font-semibold text-primary">Tarea 12</span>
+            <a href="pages/tarea12.html" class="exercise-card">
+              <span class="exercise-title">Tarea 12</span>
+              <span class="exercise-subtitle">Reverse a String</span>
             </a>
-            <!-- here -->
           </div>
         </main>
-        <footer class="mt-auto pt-8">
-          <div class="flex flex-col sm:flex-row justify-between items-center">
-            <div
-              class="text-text-secondary-light dark:text-text-secondary-dark text-sm mb-4 sm:mb-0"
-            >
-              Page 1 of 5
-            </div>
-            <div class="flex items-center space-x-1">
-              <button
-                class="p-2 rounded-lg flex items-center justify-center bg-card-light dark:bg-card-dark border border-gray-200 dark:border-gray-700 text-text-secondary-light dark:text-text-secondary-dark hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors disabled:opacity-50"
-                disabled=""
-              >
-                <span class="material-icons text-base">arrow_back</span>
-              </button>
-              <button
-                class="w-8 h-8 rounded-lg flex items-center justify-center bg-primary text-white font-semibold text-sm"
-              >
-                1
-              </button>
-              <button
-                class="w-8 h-8 rounded-lg flex items-center justify-center bg-card-light dark:bg-card-dark text-text-secondary-light dark:text-text-secondary-dark hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors text-sm"
-              >
-                2
-              </button>
-              <button
-                class="w-8 h-8 rounded-lg flex items-center justify-center bg-card-light dark:bg-card-dark text-text-secondary-light dark:text-text-secondary-dark hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors text-sm"
-              >
-                3
-              </button>
-              <span
-                class="text-text-secondary-light dark:text-text-secondary-dark px-2"
-                >...</span
-              >
-              <button
-                class="w-8 h-8 rounded-lg flex items-center justify-center bg-card-light dark:bg-card-dark text-text-secondary-light dark:text-text-secondary-dark hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors text-sm"
-              >
-                5
-              </button>
-              <button
-                class="p-2 rounded-lg flex items-center justify-center bg-card-light dark:bg-card-dark border border-gray-200 dark:border-gray-700 text-text-secondary-light dark:text-text-secondary-dark hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
-              >
-                <span class="material-icons text-base">arrow_forward</span>
-              </button>
-            </div>
+        <footer class="footer">
+          <div class="pagination">
+            <button disabled>
+              <span class="material-icons">arrow_back</span>
+            </button>
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <span>...</span>
+            <button>5</button>
+            <button><span class="material-icons">arrow_forward</span></button>
           </div>
         </footer>
       </div>

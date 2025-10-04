@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea 2</title>
-</head>
-<body>
-    <script src="../js/t2.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 2 | JS</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <link rel="stylesheet" href="../style/tarea.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="design-root">
+      <div class="layout-container">
+        <div class="layout-inner">
+          <div class="layout-content">
+            <div class="breadcrumb">
+              <a href="../index.html">Catalogar</a>
+              <span>/</span>
+              <span class="current">Ejercicio</span>
+            </div>
+            <div class="exercise-title">
+              <p>
+                Calcular la nota media de un conjunto indeterminado de notas de
+                exámenes.
+              </p>
+            </div>
+            <h3>Ejercicio</h3>
+            <ul class="description">
+              <li>
+                Haz un programa que calcule la nota media de un conjunto
+                indeterminado de notas numéricas.
+              </li>
+              <li>
+                El programa pedirá notas hasta que el usuario pulse cancelar. En
+                ese momento mostrará en la página el valor de la media
+                aritmética de las notas introducidas.
+              </li>
+            </ul>
+
+            <h3>Respuesta</h3>
+            <pre class="code-box">
+                let suma = 0;
+                let contador = 0;
+                let nota = 0;
+                while( nota !== null){
+                    let entrada = window.prompt("Introdue una nota o pulsa cancelar para terminar: 
+                    ");
+                    nota = parseFloat(entrada);
+                    
+                    if(!isNaN(nota)){
+                        console.log(nota);
+                        suma += nota;
+                        contador++;
+                    }
+                }
+                let notaMedia = suma / contador;
+                window.alert("la nota media es: " +notaMedia);
+                console.log(notaMedia);
+                </pre
+            >
+
+            <h3>Output</h3>
+            <pre class="output-box">
+                7
+                8.5
+                9
+                cancel
+                
+                la nota media es: 8.166666666666666
+            </pre>
+            <h3>Recordatorio</h3>
+            <p class="description">-</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js"></script>
+  </body>
 </html>
