@@ -90,6 +90,15 @@ p.description {
   color: #111418;
 }
 
+p.descriptionReminder {
+  font-size: 1rem; /* text-base */
+  font-weight: 400;
+  line-height: 1.5rem;
+  padding: 0.25rem 1rem 0.75rem 1rem; /* pt-1 pb-3 px-4 */
+  margin: 0;
+  color: #ff0000;
+}
+
 .code-box {
   background-color: #1e1e1e; /* dark code editor background */
   color: #d4d4d4; /* light text color */

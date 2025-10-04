@@ -1,11 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea 6</title>
-</head>
-<body>
-    <script src="../js/t6.js"></script>
-</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 6 | JS</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <link rel="stylesheet" href="../style/tarea.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="design-root">
+      <div class="layout-container">
+        <div class="layout-inner">
+          <div class="layout-content">
+            <div class="breadcrumb">
+              <a href="../index.html">Catalogar</a>
+              <span>/</span>
+              <span class="current">Ejercicio</span>
+            </div>
+            <div class="exercise-title">
+              <p>switch – if -else</p>
+            </div>
+            <h3>Ejercicio</h3>
+            <p class="description">
+                Escribe un programa que reciba un <strong>número de día</strong> (del 1 al 7) y muestre el nombre del día de la semana usando
+                <strong>switch</strong> Si el número no está entre 1 y 7, utiliza <strong>if-else</strong> para mostrar un mensaje indicando que el valor es inválido.
+            </p>
+
+            <h3>Respuesta</h3>
+            <pre class="code-box">
+                let num = window.prompt("Introduce un numero entre 1 y 7: ");
+                num = Number(num);
+
+                switch(num){
+                    case 1:
+                        console.log("El nombre del dia es lunes");
+                        break;
+                    case 2:
+                        console.log("El nombre del dia es Martes");
+                        break;
+                    case 3:
+                        console.log("El nombre del dia es Miercoles");
+                        break;
+                    case 4:
+                        console.log("El nombre del dia es Jueves");
+                        break;
+                    case 5:
+                        console.log("El nombre del dia es Viernes");
+                        break;
+                    case 6:
+                        console.log("El nombre del dia es Sabado");
+                        break;
+                    case 7:
+                        console.log("El nombre del dia es Domingo");
+                        break;
+                    default:
+                        if (num < 1){
+                            console.log(`${num} el numero es invalido prq es menor que 1`);
+                            //aqui verificamos se el numero es invalido
+                        }else{
+                            console.log(`${num} el numero es invalido prq es mayor que 7`);
+                            
+                        }
+                }
+                </pre
+            >
+
+            <h3>Output</h3>
+            <pre class="output-box">
+                1
+
+                Lunes
+            </pre>
+            <h3>Recordatorio</h3>
+            <p class="description">
+              -
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/"></script>
+  </body>
 </html>

@@ -1,11 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea 8</title>
-</head>
-<body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 8 | JS</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <link rel="stylesheet" href="../style/tarea.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="design-root">
+      <div class="layout-container">
+        <div class="layout-inner">
+          <div class="layout-content">
+            <div class="breadcrumb">
+              <a href="../index.html">Catalogar</a>
+              <span>/</span>
+              <span class="current">Ejercicio</span>
+            </div>
+            <div class="exercise-title">
+              <p>Calcular la letra del DNI</p>
+            </div>
+            <h3>Ejercicio</h3>
+            <p class="description">
+              Haz una función a la que se le pasa un DNI (ej. 12345678w o
+              87654321T) y devolverá si es correcto o no. La letra que debe
+              corresponder a un DNI correcto se obtiene dividiendo la parte
+              numérica entre 23 y cogiendo de la cadena
+              <strong>‘TRWAGMYFPDXBNJZSQVHLCKE’</strong> la letra correspondiente al resto de la
+              división. <br><strong>Por ejemplo,</strong> si el resto es 0 la letra será la T y si es
+              4 será la G. Prueba la función en la consola con tu DNI
+            </p>
+
+            <h3>Respuesta</h3>
+            <pre class="code-box">
+                function verificarDNI(dni) {
+                let cadena = `TRWAGMYFPDXBNJZSQVHLCKE`; //EMPIEZA DESDE 0 NO 1 HASTA 22; 
+                                                            0 = T y 22 = E
+                //paso 1
+                if (dni.length !== 9) {
+                    return false;
+                }
+
+                // EJEMPLOS CON 3 BUCLES FOR, FOR IN , FOR OF, MAS FACIL ES (FOR) y (FOR IN)
+                //paso 2
+                let numero = "";
+                for (let i = 0; i < 8; i++) {
+                    if (dni[i] < "0" || dni[i] > "9") {
+                    return false;
+                    }
+                    numero += dni[i];
+                }
+
+                /*   for (let i in dni) {
+                    if (i < 8) {
+                    if (dni[i] < "0" || dni[i] > "9") {
+                        return false;
+                    }
+                    numero += dni[i];
+                    }
+                }  */
+
+                /*   let test = 0;
+                for (let i of dni) {
+                    if (test < 8) {
+                    if (i < "0" || i > "9") {
+                        return false;
+                    }
+                    numero += i;
+                    }
+                    test++;
+                } */
+
+                //primera parte de dni es 8 numeros
+                let dniF = dni[8];
+
+                //segunda parte la letra
+                //paso 3
+                let letra = numero % 23;
+                //paso 4
+                let letraFinal = cadena[letra];
+
+                return dniF == letraFinal;
+                }
+                // dos ejemplos true y false
+                console.log(verificarDNI("12345678Z"));
+                console.log(verificarDNI("99999999R"));
+
+                console.log(verificarDNI("10000000T"));
+                console.log(verificarDNI("12345678W"));
+                </pre
+            >
+
+            <h3>Output</h3>
+            <pre class="output-box">
+                true
+                true
+                false
+                false
+            </pre>
+            <h3>Recordatorio</h3>
+            <p class="descriptionReminder">
+                // DNI es 8 numeros y una letra<br>
+                // paso 1: verifica dni.length = 9<br>
+                // paso 2: verifica numeros es mayor de 0 y menor de 9<br>
+                // paso 3: los 8 digitos en un numero se divide por 23 y el resto es clave por la letra<br>
+                // paso 4: obtener la letra que corresponder a ese numero<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="../js/t8.js"></script>
-</body>
+  </body>
 </html>

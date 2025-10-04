@@ -1,11 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea 7</title>
-</head>
-<body>
-    <script src="../js/t7.js"></script>
-</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 7 | JS</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <link rel="stylesheet" href="../style/tarea.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="design-root">
+      <div class="layout-container">
+        <div class="layout-inner">
+          <div class="layout-content">
+            <div class="breadcrumb">
+              <a href="../index.html">Catalogar</a>
+              <span>/</span>
+              <span class="current">Ejercicio</span>
+            </div>
+            <div class="exercise-title">
+              <p>Gestión de pedidos</p>
+            </div>
+            <h3>Ejercicio</h3>
+            <p class="description">
+                Imagina que tienes un menú en un restaurante con varios platos, y los clientes pueden realizar pedidos. El objetivo del
+                ejercicio es implementar un programa que reciba los pedidos de varios clientes, calcule el total y realice descuentos
+                dependiendo de la cantidad de platos.<br>
+                Requisitos:<br>
+                1. Menu: Pizza (10 €), Hamburguesa (8 €) Ensalada (6 €) Bebida (2 €)<br>
+                2. El programa debe hacer lo siguiente:<br>
+                - Mostrar el menú al cliente<br>
+                - Permitir que el cliente seleccione varios platos.<br>
+                - Aplicar un descuento del 10% si el cliente pide más de 3 platos.<br>
+                - Continuar aceptando pedidos hasta que el cliente elija finalizar.<br>
+                - Calcular el total y mostrarlo.<br>
+            </p>
+
+            <h3>Respuesta</h3>
+            <pre class="code-box">
+                let total = 0;
+                let pedido = 0;
+                let loop = true;
+                //permite que el cliente seleciona varios platos
+                while(loop){
+
+                    //mostrar el menu al cliente
+                    console.log(`Menu:`);
+                    console.log(`\t1: Pizza(10€)`);
+                    console.log(`\t2: Hamburguesa (8 €)`);
+                    console.log(`\t3: Ensalada (6 €)`);
+                    console.log(`\t4: Bebida (2 €)`);
+                    console.log(`\t5: Finalizar pedido`);
+
+                    let opc = parseInt(window.prompt("Selecciona un plato (1-5)"));
+
+                    switch(opc){
+                        case 1:
+                            total += 10;
+                            console.log(`Plato agregado. total hasta ahora: $${total}`);
+                            pedido++;
+                            break;
+                        case 2:
+                            total += 8;
+                            console.log(`Plato agregado. total hasta ahora: $${total}`);
+                            pedido++;
+                            break;
+                        case 3:
+                            total += 6;
+                            console.log(`Plato agregado. total hasta ahora: $${total}`);
+                            pedido++;
+                            break;
+                        case 4:
+                            total += 2;
+                            console.log(`Plato agregado. total hasta ahora: $${total}`);
+                            pedido++;
+                            break;
+                        case 5:
+                            console.log("Finalizando pedido...");
+                            //Aplicar un descuento del 10% si el cliente pide mas de 3 platos
+                            let descuento = 0;
+                            
+                            if(pedido > 3){
+                                //console.log(`Se aplica un 10% descuento`);
+                                descuento = total * 0.10;
+                                total = total - descuento;
+                            }
+
+                            //Muesrar el pedido
+                            console.log("Numero de platos: " + pedido);
+                            console.log("Descuento aplicado: " + descuento + " €");
+                            console.log("Total final a pagar: " + total + " €");
+
+                            loop = false;
+                            break;
+                        default:
+                            console.log(`opcion no  es valida`);
+                    }
+
+                }
+                </pre
+            >
+
+            <h3>Output</h3>
+            <pre class="output-box">
+                Finalizando pedido...
+                Numero de platos: 6
+                Descuento aplicado: 4.2 €
+                Total final a pagar: 37.8 €
+            </pre>
+            <h3>Recordatorio</h3>
+            <p class="description">
+              -
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/"></script>
+  </body>
 </html>

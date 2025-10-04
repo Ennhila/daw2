@@ -1,11 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea 4</title>
-</head>
-<body>
-    <script src="../js/t4.js"></script>
-</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 4 | JS</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <link rel="stylesheet" href="../style/tarea.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="design-root">
+      <div class="layout-container">
+        <div class="layout-inner">
+          <div class="layout-content">
+            <div class="breadcrumb">
+              <a href="../index.html">Catalogar</a>
+              <span>/</span>
+              <span class="current">Ejercicio</span>
+            </div>
+            <div class="exercise-title">
+              <p>Àreas y perímetros</p>
+            </div>
+            <h3>Ejercicio</h3>
+            <p class="description">
+                Realiza las funciones que consideres oportunas para:
+                <ul class="description">
+                    <li>Calcular el área de un círculo dado el radio</li>
+                    <li>Calcular el perímetro de una circunferencia dado el radio</li>
+                    <li>Calcular el perímetro de un polígono regular dada la longitud de uno de sus lados.</li>
+                    <li> Calcular el área de un polígono regular dada la longitud de uno de sus lados</li>
+                </ul>
+            </p>
+            <p class="description">
+                Realiza un programa que muestre el funcionamiento de todas las funciones anteriores.<br>
+                Instrucciones para calcular el área de un polígono regular:<br>
+                El área o superficie de un polígono es igual al producto del perímetro por la apotema dividido por dos.<br>
+                El perímetro es la suma de todos los lados. Si el polígono regular tiene n lados y la longitud del lado es l, el perímetro será igual a: P = n·l.
+            </p>
+            <h3>Respuesta</h3>
+            <pre class="code-box">
+                //funcion para calcular area de circulo 
+                function cArea(r) {
+                return Math.PI * r * r;
+                }
+
+                //funcion para calcular perimetro de circulo
+                function cPerimetro(r) {
+                return 2 * Math.PI * r;
+                }
+
+                // funcion para calcular perimetro de un poligono
+                function poliPerimetro(longitudLado, numLados) {
+                return longitudLado * numLados;
+                }
+
+                //funcion para calcular area de un poligono 
+                function poliArea(longitudLado, numLados) {
+                return (numLados * longitudLado * longitudLado) / (4 * Math.tan(Math.PI / 
+                numLados));
+                }
+
+                // console !!!!
+
+                let r = parseFloat(prompt("Introduce el radio del circulo:"));
+
+                alert("Area de circulo: " + cArea(r) +
+                    "\nPerimetro de circulo: " + cPerimetro(r));
+                console.log("Area de circulo:", cArea(r));
+                console.log("Perimetro de circulo:", cPerimetro(r));
+
+                let longitudLado = parseFloat(prompt("Introduce la longitud de un lado del 
+                poligono:"));
+                let numLados = parseInt(prompt("Introduce el num de lados del polgono:"), 10);
+
+                alert("Perimetro del poligono:: " + poliPerimetro(longitudLado, numLados) +
+                    "\nArea poligono: " + poliArea(longitudLado, numLados));
+                console.log("Perimetro del poligono:", poliPerimetro(longitudLado, numLados));
+                console.log("Area poligono:", poliArea(longitudLado, numLados));
+
+                </pre
+            >
+
+            <h3>Output</h3>
+            <pre class="output-box">
+                OUTPUT
+            </pre>
+            <h3>Recordatorio</h3>
+            <p class="description">
+              nada por ahora
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/"></script>
+  </body>
 </html>

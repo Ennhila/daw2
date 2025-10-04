@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea 3</title>
-</head>
-<body>
-    <script src="../js/t3.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 3 | JS</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <link rel="stylesheet" href="../style/tarea.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="design-root">
+      <div class="layout-container">
+        <div class="layout-inner">
+          <div class="layout-content">
+            <div class="breadcrumb">
+              <a href="../index.html">Catalogar</a>
+              <span>/</span>
+              <span class="current">Ejercicio</span>
+            </div>
+            <div class="exercise-title">
+              <p>Factorial</p>
+            </div>
+            <h3>Ejercicio</h3>
+            <p class="description">
+              EJERCICIO: El factorial de un número entero n es una operación
+              matemática que consiste en multiplicar ese número por todos los
+              enteros menores que él: n x (n-1) x (n-2) x … x 1. Así, el
+              factorial de 5 (se escribe 5!) y vale 5! = 5 x 4 x 3 x 2 x 1 =
+              120. Haz un script que calcule el factorial de un número entero
+              positivo
+            </p>
+            <p class="description">
+                La página web pedirá un valor y mostrará tanto 
+                el valor resultante como la ecuación que lo calcula.
+            </p>
+
+            <h3>Respuesta</h3>
+            <pre class="code-box">
+               function calcularF(n) {
+                let factorial = 1;
+                for (let i = n; i > 0; i--) {
+                    factorial = factorial * i;
+                }
+                return factorial;
+                }
+
+                let entrada = window.prompt("Introducxe un numero: ");
+                let numero = parseInt(entrada);
+
+                if (isNaN(numero) || numero < 0) {
+                window.alert("Error, introduce un numero POSITIVO");
+                } else {
+                    let r = calcularF(numero);
+                    console.log("factorial de esta numero es: " + r);    
+                }
+                </pre
+            >
+
+            <h3>Output</h3>
+            <pre class="output-box">
+                6
+                6! = 6 x 5 x 4 x 3 x 2 x 1 = 720
+                factorial de esta numero es: 720
+            </pre>
+            <h3>Recordatorio</h3>
+            <p class="description" >-</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/"></script>
+  </body>
 </html>

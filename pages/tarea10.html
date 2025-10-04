@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,26 +23,73 @@
               <span class="current">Ejercicio</span>
             </div>
             <div class="exercise-title">
-              <p>NOMBRE DE EJERCICIO</p>
+              <p>Errores</p>
             </div>
             <h3>Ejercicio</h3>
             <p class="description">
-              AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+              Crea una función <strong>calcular(num1, operador, num2)</strong> que simule una calculadora simple que permita sumar,
+              restar, multiplicar o dividir dos números. Utiliza try...catch para manejar errores, como cuando el usuario pasa un
+              valor que no es un número o intenta dividir entre cero.
             </p>
 
             <h3>Respuesta</h3>
             <pre class="code-box">
-               CODE
+              function calcular(num1, operado, num2) {
+                num1 = parseInt(window.prompt("Introduce el primero numero: "));
+                operado = window.prompt("Introduce el operador que puede ser +, -, * o /");
+                num2 = parseInt(window.prompt("Introduce el segundo numero: "));
+                try {
+
+                  //Si alguno de los valores no es un número, lanza un error.
+                  if (isNaN(num1) || isNaN(num2)) {
+                    throw new Error("alguno de los valores no es un número");
+                  }
+
+                  //Si intentas dividir por cero, lanza un error
+                  if (operado === "/" && num2 == 0) {
+                    throw new Error(" intentas dividir por cero");
+                  }
+                  // Si todo es correcto, realiza la operación y devuelve el resultado.
+                  let r = 0;
+                  switch (operado) {
+                    case `+`:
+                      r = num1 + num2;
+                      console.log(r);
+                      break;
+                    case `-`:
+                      r = num1 - num2;
+                      console.log(r);
+                      break;
+                    case `*`:
+                      r = num1 * num2;
+                      console.log(r);
+                      break;
+                    case `/`:
+                      r = num1 / num2;
+                      console.log(r);
+                      break;
+                    default:
+                      //Si el operador no es válido, lanza un error.
+                      throw new Error("el operador no es válido");
+                  }
+                  return r;
+                } catch (error) {
+                  console.log("Error:", error.message);
+                }
+              }
+
+              calcular();
+
                 </pre
             >
 
             <h3>Output</h3>
             <pre class="output-box">
-                OUTPUT
+                -
             </pre>
             <h3>Recordatorio</h3>
             <p class="description">
-              nada por ahora
+              -
             </p>
           </div>
         </div>

@@ -1,11 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=º, initial-scale=1.0">
-    <title>Tarea 5</title>
-</head>
-<body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 5 | JS</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <link rel="stylesheet" href="../style/tarea.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="design-root">
+      <div class="layout-container">
+        <div class="layout-inner">
+          <div class="layout-content">
+            <div class="breadcrumb">
+              <a href="../index.html">Catalogar</a>
+              <span>/</span>
+              <span class="current">Ejercicio</span>
+            </div>
+            <div class="exercise-title">
+              <p>Funciones anónimas y Funciones flecha</p>
+            </div>
+            <h3>Ejercicio</h3>
+            <p class="description">
+              Crea una función que tome un número como argumento y:<br>
+              Llama a la primera función 3 veces para probar todos los casos. Muestra los 3 resultados en consola.<br>
+              <ul class="description">
+                <li>Utilice una función anónima para verificar si el número es positivo, negativo o cero. Mostrará texto explicativo en consola.</li>
+                <li>Utilice una función flecha para elevar el número al cuadrado. Devolverá este resultado</li>
+              </ul>
+            </p>
+
+            <h3>Respuesta</h3>
+            <pre class="code-box">
+                function eje5(num){
+                    // primera funcion para verificar el numero
+                    (function(n){
+                        if(n > 0){
+                            console.log(n + " numero es positivo");
+                        }else if ( n < 0){
+                            console.log(n + " numero es negativo");
+                        }else{
+                            console.log(n + " es cero");
+                        }
+                    })(num);
+
+                    // funcion flecha
+                    const cuadrado = n => n * n;
+                    //Devolvera esta resultado
+                    return cuadrado(num);
+                }
+                //llama la funcion
+                const r1 = eje5(5);
+                const r2 = eje5(-3);
+                const r3 = eje5(0);
+                // Muestrar 3 resultado en consola
+                console.log("Cuadrado de 5:", r1);
+                console.log("Cuadrado de -3:", r2);
+                console.log("Cuadrado de 0:", r3);
+                </pre
+            >
+
+            <h3>Output</h3>
+            <pre class="output-box">
+                5 numero es positivo
+                -3 numero es negativo
+                0 es cero
+                Cuadrado de 5: 25
+                Cuadrado de -3: 9
+                Cuadrado de 0: 0
+            </pre>
+            <h3>Recordatorio</h3>
+            <p class="description">
+              -
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="../js/t5.js"></script>
-</body>
+  </body>
 </html>

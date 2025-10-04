@@ -1,12 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea 9</title>
-</head>
-<body>
-    <a href="../index.html">GO Back</a>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 9 | JS</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <link rel="stylesheet" href="../style/tarea.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="design-root">
+      <div class="layout-container">
+        <div class="layout-inner">
+          <div class="layout-content">
+            <div class="breadcrumb">
+              <a href="../index.html">Catalogar</a>
+              <span>/</span>
+              <span class="current">Ejercicio</span>
+            </div>
+            <div class="exercise-title">
+              <p>Palíndromos</p>
+            </div>
+            <h3>Ejercicio</h3>
+            <p class="description">
+                Realiza una función llamada esPalindroma(string) que devuelva un valor booleano indicando si la cadena que se pasa es
+                palíndroma o no. La función aceptará un argumento string
+            </p>
+
+            <h3>Respuesta</h3>
+            <pre class="code-box">
+                function esPalindroma(string) {
+                // paso 1: poner todo en minúsculas
+                string = string.toLowerCase();
+
+                // paso 2: quitar espacios
+                string = string.replaceAll(" ", "");
+
+                // paso 3
+                let revers = string.split("").reverse().join("");
+
+                // paso 4: comparar
+                if (string === revers) {
+                    return true;
+                } else {
+                    return false;
+                }
+                }
+
+                console.log(esPalindroma("ilyass"));
+                console.log(esPalindroma("area"));
+                console.log(esPalindroma("Ana"));
+                </pre
+            >
+
+            <h3>Output</h3>
+            <pre class="output-box">
+                false
+                false
+                true
+            </pre>
+            <h3>Recordatorio</h3>
+            <p class="descriptionReminder">
+                Por ejemplo una plabra = "ilyass"<br>
+                1- <strong>.split("")</strong> es para divide el string en un array de caracteres<br>
+                    // ["i", "l", "y", "a", "s", "s"]<br>
+                2- <strong>.reverse()</strong> este método invierte el orden de los elementos del array<br>
+                    // ["s", "s", "a", "y", "l", "i"]<br>
+                3- <strong>.join("")</strong> Vuelve a unir todos los elementos del array en un string, sin comas<br>
+                    // ssayli<br>
+                <strong>let revers = string.split("").reverse().join("");</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="../js/t9.js"></script>
-</body>
+  </body>
 </html>

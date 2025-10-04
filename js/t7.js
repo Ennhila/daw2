@@ -1,9 +1,6 @@
-
 let total = 0;
 let pedido = 0;
 let loop = true;
-
-
 //permite que el cliente seleciona varios platos
 while(loop){
 
