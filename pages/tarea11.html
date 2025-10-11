@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 11 | JS</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <link rel="stylesheet" href="../style/tarea.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="design-root">
+      <div class="layout-container">
+        <div class="layout-inner">
+          <div class="layout-content">
+            <div class="breadcrumb">
+              <a href="../index.html">Catalogar</a>
+              <span>/</span>
+              <span class="current">Ejercicio</span>
+            </div>
+            <div class="exercise-title">
+              <p>Objetos básicos</p>
+            </div>
+            <h3>Ejercicio</h3>
+            <p class="description">
+              Partiendo de las variables:<br>
+              let claseDaw = [];<br>let claseAsir = [];<br>
+              Crea un programa que gestione la información de varios estudiantes de estas dos clases.
+                Cada objeto <strong>estudiante</strong> tendrá un <strong>nombre, edad </strong>y <strong>notas</strong> (un array de números). El programa debe permitir:
+              <ul>
+                <li>agregar estudiantes a una clase.</li>
+                <li>calcular el promedio de las notas de cada estudiante</li>
+                <li>encontrar al estudiante con el promedio más alto de una clase.</li>
+                <li>listar todos los estudiantes de una clase.</li>
+              </ul>
+            </p>
+
+            <h3>Respuesta</h3>
+            <pre class="code-box">
+                let claseDaw = [];
+                let claseAsir = [];
+
+                function agregarEstudiante(arrayClase, nombre, edad, notas){
+                    arrayClase.push({nombre, edad, notas});
+                }
+
+                function calcularPromedio(notas){
+                    let suma = 0;
+                    for(let nota of notas){
+                        suma += nota;
+                    }
+                    return suma / notas.length;
+                }
+
+                function estudianteConMejorPromedio(arrayClase){
+                    const estudianteMejor = arrayClase.reduce((mejor, actual) => {
+                        const m1 = calcularPromedio(mejor.notas);
+                        const m2 = calcularPromedio(actual.notas);
+                        if (m1 > m2){
+                            return mejor;
+                        }else{
+                            return actual;
+                        }
+                    })
+                    return estudianteMejor;
+                }
+
+                function listarEstudiantes(arrayClase){
+                    console.log(`Lista de Alumnos:`);
+                    for(let estudiante of arrayClase){
+                        const media = calcularPromedio(estudiante.notas).toFixed(2);
+                        console.log(`Nombre: ${estudiante.nombre}, Edad: ${estudiante.edad}, Promedio: ${media}`);
+                    }
+                }
+                //caso de uso
+                agregarEstudiante(claseDaw, "María", 28, [8.0, 8.5, 9.0, 5.0, 2]); 
+                agregarEstudiante(claseDaw, "Pedro", 19, [7.5, 8.1, 9.0]); 
+                agregarEstudiante(claseDaw, "Juan", 25, [6.0, 7.0, 6.5]); 
+
+                agregarEstudiante(claseAsir, "Carlos", 20, [4.2, 8.5, 9.0]); 
+                agregarEstudiante(claseAsir, "Ana", 21, [7.0, 6.0, 7.0]); 
+                agregarEstudiante(claseAsir, "Pepa", 19, [6.0, 6.0, 6.4]); 
+
+
+                listarEstudiantes(claseDaw);
+                const mejorDaw = estudianteConMejorPromedio(claseDaw);
+                console.log(`El mejor estudiante de DAW es ${mejorDaw.nombre} con un promedio de ${calcularPromedio(mejorDaw.notas).toFixed(2)}`);
+
+                listarEstudiantes(claseAsir);
+                const mejorAsir = estudianteConMejorPromedio(claseAsir);
+                console.log(`El mejor estudiante de ASIR es ${mejorAsir.nombre} con un promedio de ${calcularPromedio(mejorAsir.notas).toFixed(2)}`);
+                </pre
+            >
+
+            <h3>Output</h3>
+            <pre class="output-box">
+                Lista de Alumnos:
+                Nombre: María, Edad: 28, Promedio: 6.50
+                Nombre: Pedro, Edad: 19, Promedio: 8.20
+                Nombre: Juan, Edad: 25, Promedio: 6.50
+                El mejor estudiante de DAW es Pedro con un promedio de 8.20
+                Lista de Alumnos:
+                Nombre: Carlos, Edad: 20, Promedio: 7.23
+                Nombre: Ana, Edad: 21, Promedio: 6.67
+                Nombre: Pepa, Edad: 19, Promedio: 6.13
+                El mejor estudiante de ASIR es Carlos con un promedio de 7.23
+            </pre>
+            <h3>Recordatorio</h3>
+            <p class="descriptionReminder">
+              return promActual > promMejor ? actual : mejor;<br>
+              <b>What it means:</b><br>
+                Si promActual es mayor que promMejor, devuelve actual; de lo contrario, devuelve mejor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/t11.js"></script>
+  </body>
+</html>
